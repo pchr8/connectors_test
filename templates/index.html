@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>The POST form to end all POST forms</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h4>Опросник который закончит все опросники</h4>
+        <p>Этот файл содержит два списка из фамилий. Поставьте галочку (можнo нажимая на имя) напротив тех, человека с которой вы знаете лично, независимо от пола. ("Поплавський" и "Поплавська" это одно и то же.).
+        </p>
+        <p>
+        В конце, вы узнаете много интересного о себе. 
+        Все вопросы к @pchr8.
+        Спасибо!</p>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+            <form action="{{url_for('userres')}}" method="post">
+
+      <div class="one-half column">
+        <h3> LIST ONE </h3>
+<label for="ПІВТОРАК"> 1: ПІВТОРАК</label>
+
+<input type="checkbox" id="ПІВТОРАК" name="name[]" value="ПІВТОРАК">
+<label for="СТЕПАНЧУК"> 2: СТЕПАНЧУК</label>
+
+<input type="checkbox" id="СТЕПАНЧУК" name="name[]" value="СТЕПАНЧУК">
+<label for="МИХАЙЛЕНКО"> 3: МИХАЙЛЕНКО</label>
+
+<input type="checkbox" id="МИХАЙЛЕНКО" name="name[]" value="МИХАЙЛЕНКО">
+<label for="ФЕЩЕНКО"> 4: ФЕЩЕНКО</label>
+
+<input type="checkbox" id="ФЕЩЕНКО" name="name[]" value="ФЕЩЕНКО">
+<label for="МАКАРЧУК"> 5: МАКАРЧУК</label>
+
+<input type="checkbox" id="МАКАРЧУК" name="name[]" value="МАКАРЧУК">
+<label for="КАЛІНІНА"> 6: КАЛІНІНА</label>
+
+<input type="checkbox" id="КАЛІНІНА" name="name[]" value="КАЛІНІНА">
+<label for="НИЖНИК"> 7: НИЖНИК</label>
+
+<input type="checkbox" id="НИЖНИК" name="name[]" value="НИЖНИК">
+<label for="МУЗИЧЕНКО"> 8: МУЗИЧЕНКО</label>
+
+<input type="checkbox" id="МУЗИЧЕНКО" name="name[]" value="МУЗИЧЕНКО">
+<label for="ІЩЕНКО"> 9: ІЩЕНКО</label>
+
+<input type="checkbox" id="ІЩЕНКО" name="name[]" value="ІЩЕНКО">
+<label for="АНТОНОВА"> 10: АНТОНОВА</label>
+
+<input type="checkbox" id="АНТОНОВА" name="name[]" value="АНТОНОВА">
+<label for="СМІРНОВА"> 11: СМІРНОВА</label>
+
+<input type="checkbox" id="СМІРНОВА" name="name[]" value="СМІРНОВА">
+<label for="ГЛАДКИЙ"> 12: ГЛАДКИЙ</label>
+
+<input type="checkbox" id="ГЛАДКИЙ" name="name[]" value="ГЛАДКИЙ">
+<label for="ТРЕГУБ"> 13: ТРЕГУБ</label>
+
+<input type="checkbox" id="ТРЕГУБ" name="name[]" value="ТРЕГУБ">
+<label for="ДОНЕЦЬ"> 14: ДОНЕЦЬ</label>
+
+<input type="checkbox" id="ДОНЕЦЬ" name="name[]" value="ДОНЕЦЬ">
+<label for="ІЩУК"> 15: ІЩУК</label>
+
+<input type="checkbox" id="ІЩУК" name="name[]" value="ІЩУК">
+<label for="СМАЛЬ"> 16: СМАЛЬ</label>
+
+<input type="checkbox" id="СМАЛЬ" name="name[]" value="СМАЛЬ">
+<label for="САВИЦЬКА"> 17: САВИЦЬКА</label>
+
+<input type="checkbox" id="САВИЦЬКА" name="name[]" value="САВИЦЬКА">
+<label for="САМОЙЛЕНКО"> 18: САМОЙЛЕНКО</label>
+
+<input type="checkbox" id="САМОЙЛЕНКО" name="name[]" value="САМОЙЛЕНКО">
+<label for="ГАВРИЛЯК"> 19: ГАВРИЛЯК</label>
+
+<input type="checkbox" id="ГАВРИЛЯК" name="name[]" value="ГАВРИЛЯК">
+<label for="БЕРЕЗА"> 20: БЕРЕЗА</label>
+
+<input type="checkbox" id="БЕРЕЗА" name="name[]" value="БЕРЕЗА">
+<label for="БУРЯН"> 21: БУРЯН</label>
+
+<input type="checkbox" id="БУРЯН" name="name[]" value="БУРЯН">
+<label for="ГРИЦАЄНКО"> 22: ГРИЦАЄНКО</label>
+
+<input type="checkbox" id="ГРИЦАЄНКО" name="name[]" value="ГРИЦАЄНКО">
+<label for="ЧЕРНУХА"> 23: ЧЕРНУХА</label>
+
+<input type="checkbox" id="ЧЕРНУХА" name="name[]" value="ЧЕРНУХА">
+<label for="ВДОВИЧЕНКО"> 24: ВДОВИЧЕНКО</label>
+
+<input type="checkbox" id="ВДОВИЧЕНКО" name="name[]" value="ВДОВИЧЕНКО">
+<label for="ЮРКЕВИЧ"> 25: ЮРКЕВИЧ</label>
+
+<input type="checkbox" id="ЮРКЕВИЧ" name="name[]" value="ЮРКЕВИЧ">
+<label for="РУДА"> 26: РУДА</label>
+
+<input type="checkbox" id="РУДА" name="name[]" value="РУДА">
+<label for="ДАНИЛЕНКО"> 27: ДАНИЛЕНКО</label>
+
+<input type="checkbox" id="ДАНИЛЕНКО" name="name[]" value="ДАНИЛЕНКО">
+<label for="ШАРКО"> 28: ШАРКО</label>
+
+<input type="checkbox" id="ШАРКО" name="name[]" value="ШАРКО">
+<label for="ГАВРИШ"> 29: ГАВРИШ</label>
+
+<input type="checkbox" id="ГАВРИШ" name="name[]" value="ГАВРИШ">
+<label for="КОТЕНКО"> 30: КОТЕНКО</label>
+
+<input type="checkbox" id="КОТЕНКО" name="name[]" value="КОТЕНКО">
+<label for="ЛЯШУК"> 31: ЛЯШУК</label>
+
+<input type="checkbox" id="ЛЯШУК" name="name[]" value="ЛЯШУК">
+<label for="ЧЕМЕРИС"> 32: ЧЕМЕРИС</label>
+
+<input type="checkbox" id="ЧЕМЕРИС" name="name[]" value="ЧЕМЕРИС">
+<label for="САВІНА"> 33: САВІНА</label>
+
+<input type="checkbox" id="САВІНА" name="name[]" value="САВІНА">
+<label for="КОРОЛЬОВА"> 34: КОРОЛЬОВА</label>
+
+<input type="checkbox" id="КОРОЛЬОВА" name="name[]" value="КОРОЛЬОВА">
+<label for="ЧЕРЕДНІЧЕНКО"> 35: ЧЕРЕДНІЧЕНКО</label>
+
+<input type="checkbox" id="ЧЕРЕДНІЧЕНКО" name="name[]" value="ЧЕРЕДНІЧЕНКО">
+<label for="ВОЙТЮК"> 36: ВОЙТЮК</label>
+
+<input type="checkbox" id="ВОЙТЮК" name="name[]" value="ВОЙТЮК">
+<label for="ГУК"> 37: ГУК</label>
+
+<input type="checkbox" id="ГУК" name="name[]" value="ГУК">
+<label for="АЛЄКСЄЄНКО"> 38: АЛЄКСЄЄНКО</label>
+
+<input type="checkbox" id="АЛЄКСЄЄНКО" name="name[]" value="АЛЄКСЄЄНКО">
+<label for="ВЕРГУН"> 39: ВЕРГУН</label>
+
+<input type="checkbox" id="ВЕРГУН" name="name[]" value="ВЕРГУН">
+<label for="ЩЕРБАНЬ"> 40: ЩЕРБАНЬ</label>
+
+<input type="checkbox" id="ЩЕРБАНЬ" name="name[]" value="ЩЕРБАНЬ">
+<label for="ЯКОВЕЦЬ"> 41: ЯКОВЕЦЬ</label>
+
+<input type="checkbox" id="ЯКОВЕЦЬ" name="name[]" value="ЯКОВЕЦЬ">
+<label for="ТОВТ"> 42: ТОВТ</label>
+
+<input type="checkbox" id="ТОВТ" name="name[]" value="ТОВТ">
+<label for="ІГНАТОВА"> 43: ІГНАТОВА</label>
+
+<input type="checkbox" id="ІГНАТОВА" name="name[]" value="ІГНАТОВА">
+<label for="КОВПАК"> 44: КОВПАК</label>
+
+<input type="checkbox" id="КОВПАК" name="name[]" value="КОВПАК">
+<label for="ЧИРВА"> 45: ЧИРВА</label>
+
+<input type="checkbox" id="ЧИРВА" name="name[]" value="ЧИРВА">
+<label for="ПАЛІЄНКО"> 46: ПАЛІЄНКО</label>
+
+<input type="checkbox" id="ПАЛІЄНКО" name="name[]" value="ПАЛІЄНКО">
+<label for="ГРОМОВА"> 47: ГРОМОВА</label>
+
+<input type="checkbox" id="ГРОМОВА" name="name[]" value="ГРОМОВА">
+<label for="ДЕРКАЧ"> 48: ДЕРКАЧ</label>
+
+<input type="checkbox" id="ДЕРКАЧ" name="name[]" value="ДЕРКАЧ">
+<label for="КУДРЯВЦЕВА"> 49: КУДРЯВЦЕВА</label>
+
+<input type="checkbox" id="КУДРЯВЦЕВА" name="name[]" value="КУДРЯВЦЕВА">
+<label for="КОЛЄСНІК"> 50: КОЛЄСНІК</label>
+
+<input type="checkbox" id="КОЛЄСНІК" name="name[]" value="КОЛЄСНІК">
+<label for="СТАДНИК"> 51: СТАДНИК</label>
+
+<input type="checkbox" id="СТАДНИК" name="name[]" value="СТАДНИК">
+<label for="ЯЩЕНКО"> 52: ЯЩЕНКО</label>
+
+<input type="checkbox" id="ЯЩЕНКО" name="name[]" value="ЯЩЕНКО">
+<label for="РЯБА"> 53: РЯБА</label>
+
+<input type="checkbox" id="РЯБА" name="name[]" value="РЯБА">
+<label for="ЛЕОНЕНКО"> 54: ЛЕОНЕНКО</label>
+
+<input type="checkbox" id="ЛЕОНЕНКО" name="name[]" value="ЛЕОНЕНКО">
+<label for="ГЛУЩУК"> 55: ГЛУЩУК</label>
+
+<input type="checkbox" id="ГЛУЩУК" name="name[]" value="ГЛУЩУК">
+<label for="ГЛОБА"> 56: ГЛОБА</label>
+
+<input type="checkbox" id="ГЛОБА" name="name[]" value="ГЛОБА">
+<label for="БИЧОК"> 57: БИЧОК</label>
+
+<input type="checkbox" id="БИЧОК" name="name[]" value="БИЧОК">
+<label for="ДАЦЕНКО"> 58: ДАЦЕНКО</label>
+
+<input type="checkbox" id="ДАЦЕНКО" name="name[]" value="ДАЦЕНКО">
+<label for="КАБАНЕЦЬ"> 59: КАБАНЕЦЬ</label>
+
+<input type="checkbox" id="КАБАНЕЦЬ" name="name[]" value="КАБАНЕЦЬ">
+<label for="СТЕЦЕНКО"> 60: СТЕЦЕНКО</label>
+
+<input type="checkbox" id="СТЕЦЕНКО" name="name[]" value="СТЕЦЕНКО">
+<label for="ВАСИЛЮК"> 61: ВАСИЛЮК</label>
+
+<input type="checkbox" id="ВАСИЛЮК" name="name[]" value="ВАСИЛЮК">
+<label for="ДОРОШЕНКО"> 62: ДОРОШЕНКО</label>
+
+<input type="checkbox" id="ДОРОШЕНКО" name="name[]" value="ДОРОШЕНКО">
+<label for="КОНДРАТЮК"> 63: КОНДРАТЮК</label>
+
+<input type="checkbox" id="КОНДРАТЮК" name="name[]" value="КОНДРАТЮК">
+<label for="ЛАЗАРЧУК"> 64: ЛАЗАРЧУК</label>
+
+<input type="checkbox" id="ЛАЗАРЧУК" name="name[]" value="ЛАЗАРЧУК">
+<label for="КУЦ"> 65: КУЦ</label>
+
+<input type="checkbox" id="КУЦ" name="name[]" value="КУЦ">
+<label for="ДЕРЕВЯНКО"> 66: ДЕРЕВЯНКО</label>
+
+<input type="checkbox" id="ДЕРЕВЯНКО" name="name[]" value="ДЕРЕВЯНКО">
+<label for="ГОРБАЧ"> 67: ГОРБАЧ</label>
+
+<input type="checkbox" id="ГОРБАЧ" name="name[]" value="ГОРБАЧ">
+<label for="РЕМЕЗ"> 68: РЕМЕЗ</label>
+
+<input type="checkbox" id="РЕМЕЗ" name="name[]" value="РЕМЕЗ">
+<label for="ЗАВГОРОДНІЙ"> 69: ЗАВГОРОДНІЙ</label>
+
+<input type="checkbox" id="ЗАВГОРОДНІЙ" name="name[]" value="ЗАВГОРОДНІЙ">
+<label for="МАЦЕНКО"> 70: МАЦЕНКО</label>
+
+<input type="checkbox" id="МАЦЕНКО" name="name[]" value="МАЦЕНКО">
+<label for="ВОЛОШИН"> 71: ВОЛОШИН</label>
+
+<input type="checkbox" id="ВОЛОШИН" name="name[]" value="ВОЛОШИН">
+<label for="ОСИПЧУК"> 72: ОСИПЧУК</label>
+
+<input type="checkbox" id="ОСИПЧУК" name="name[]" value="ОСИПЧУК">
+<label for="ЧМІЛЬ"> 73: ЧМІЛЬ</label>
+
+<input type="checkbox" id="ЧМІЛЬ" name="name[]" value="ЧМІЛЬ">
+<label for="ГНАТЕНКО"> 74: ГНАТЕНКО</label>
+
+<input type="checkbox" id="ГНАТЕНКО" name="name[]" value="ГНАТЕНКО">
+<label for="ДЯЧЕНКО"> 75: ДЯЧЕНКО</label>
+
+<input type="checkbox" id="ДЯЧЕНКО" name="name[]" value="ДЯЧЕНКО">
+<label for="ТИХОНОВА"> 76: ТИХОНОВА</label>
+
+<input type="checkbox" id="ТИХОНОВА" name="name[]" value="ТИХОНОВА">
+<label for="СЕНИК"> 77: СЕНИК</label>
+
+<input type="checkbox" id="СЕНИК" name="name[]" value="СЕНИК">
+<label for="ПЕТРЕНКО"> 78: ПЕТРЕНКО</label>
+
+<input type="checkbox" id="ПЕТРЕНКО" name="name[]" value="ПЕТРЕНКО">
+<label for="ГУБА"> 79: ГУБА</label>
+
+<input type="checkbox" id="ГУБА" name="name[]" value="ГУБА">
+<label for="ТРОХИМЕНКО"> 80: ТРОХИМЕНКО</label>
+
+<input type="checkbox" id="ТРОХИМЕНКО" name="name[]" value="ТРОХИМЕНКО">
+<label for="ДАВИДЕНКО"> 81: ДАВИДЕНКО</label>
+
+<input type="checkbox" id="ДАВИДЕНКО" name="name[]" value="ДАВИДЕНКО">
+<label for="МЕДВІДЬ"> 82: МЕДВІДЬ</label>
+
+<input type="checkbox" id="МЕДВІДЬ" name="name[]" value="МЕДВІДЬ">
+<label for="АВРАМЧУК"> 83: АВРАМЧУК</label>
+
+<input type="checkbox" id="АВРАМЧУК" name="name[]" value="АВРАМЧУК">
+<label for="ПОЛТАВЕЦЬ"> 84: ПОЛТАВЕЦЬ</label>
+
+<input type="checkbox" id="ПОЛТАВЕЦЬ" name="name[]" value="ПОЛТАВЕЦЬ">
+<label for="ШКЛЯРУК"> 85: ШКЛЯРУК</label>
+
+<input type="checkbox" id="ШКЛЯРУК" name="name[]" value="ШКЛЯРУК">
+<label for="НАКОНЕЧНИЙ"> 86: НАКОНЕЧНИЙ</label>
+
+<input type="checkbox" id="НАКОНЕЧНИЙ" name="name[]" value="НАКОНЕЧНИЙ">
+<label for="ПОПКО"> 87: ПОПКО</label>
+
+<input type="checkbox" id="ПОПКО" name="name[]" value="ПОПКО">
+<label for="КОРЧАК"> 88: КОРЧАК</label>
+
+<input type="checkbox" id="КОРЧАК" name="name[]" value="КОРЧАК">
+<label for="НАЗАРОВ"> 89: НАЗАРОВ</label>
+
+<input type="checkbox" id="НАЗАРОВ" name="name[]" value="НАЗАРОВ">
+<label for="ТРОФИМЕНКО"> 90: ТРОФИМЕНКО</label>
+
+<input type="checkbox" id="ТРОФИМЕНКО" name="name[]" value="ТРОФИМЕНКО">
+<label for="БОРОДАВКА"> 91: БОРОДАВКА</label>
+
+<input type="checkbox" id="БОРОДАВКА" name="name[]" value="БОРОДАВКА">
+<label for="ГУЛАК"> 92: ГУЛАК</label>
+
+<input type="checkbox" id="ГУЛАК" name="name[]" value="ГУЛАК">
+<label for="КРИВА"> 93: КРИВА</label>
+
+<input type="checkbox" id="КРИВА" name="name[]" value="КРИВА">
+<label for="АЛЕКСЄЄВ"> 94: АЛЕКСЄЄВ</label>
+
+<input type="checkbox" id="АЛЕКСЄЄВ" name="name[]" value="АЛЕКСЄЄВ">
+<label for="ГАРАЩЕНКО"> 95: ГАРАЩЕНКО</label>
+
+<input type="checkbox" id="ГАРАЩЕНКО" name="name[]" value="ГАРАЩЕНКО">
+
+
+      </div>
+      <div class="one-half column">
+        <h3> LIST TWO </h3>
+<label for="ГОЛОВАНЬ"> 1: ГОЛОВАНЬ</label>
+
+<input type="checkbox" id="ГОЛОВАНЬ" name="name2[]" value="ГОЛОВАНЬ">
+<label for="КУРИЛО"> 2: КУРИЛО</label>
+
+<input type="checkbox" id="КУРИЛО" name="name2[]" value="КУРИЛО">
+<label for="ГУЦУЛЯК"> 3: ГУЦУЛЯК</label>
+
+<input type="checkbox" id="ГУЦУЛЯК" name="name2[]" value="ГУЦУЛЯК">
+<label for="МАКАРЧУК"> 4: МАКАРЧУК</label>
+
+<input type="checkbox" id="МАКАРЧУК" name="name2[]" value="МАКАРЧУК">
+<label for="ОСІПЧУК"> 5: ОСІПЧУК</label>
+
+<input type="checkbox" id="ОСІПЧУК" name="name2[]" value="ОСІПЧУК">
+<label for="ІЩЕНКО"> 6: ІЩЕНКО</label>
+
+<input type="checkbox" id="ІЩЕНКО" name="name2[]" value="ІЩЕНКО">
+<label for="БАРАН"> 7: БАРАН</label>
+
+<input type="checkbox" id="БАРАН" name="name2[]" value="БАРАН">
+<label for="ЯНЮК"> 8: ЯНЮК</label>
+
+<input type="checkbox" id="ЯНЮК" name="name2[]" value="ЯНЮК">
+<label for="КАРПОВИЧ"> 9: КАРПОВИЧ</label>
+
+<input type="checkbox" id="КАРПОВИЧ" name="name2[]" value="КАРПОВИЧ">
+<label for="РЕЗНІЧЕНКО"> 10: РЕЗНІЧЕНКО</label>
+
+<input type="checkbox" id="РЕЗНІЧЕНКО" name="name2[]" value="РЕЗНІЧЕНКО">
+<label for="СТЕПАНОВА"> 11: СТЕПАНОВА</label>
+
+<input type="checkbox" id="СТЕПАНОВА" name="name2[]" value="СТЕПАНОВА">
+<label for="КОБЕЦЬ"> 12: КОБЕЦЬ</label>
+
+<input type="checkbox" id="КОБЕЦЬ" name="name2[]" value="КОБЕЦЬ">
+<label for="СЛОБОДЯН"> 13: СЛОБОДЯН</label>
+
+<input type="checkbox" id="СЛОБОДЯН" name="name2[]" value="СЛОБОДЯН">
+<label for="СТРИЖАК"> 14: СТРИЖАК</label>
+
+<input type="checkbox" id="СТРИЖАК" name="name2[]" value="СТРИЖАК">
+<label for="КРИВОШЕЯ"> 15: КРИВОШЕЯ</label>
+
+<input type="checkbox" id="КРИВОШЕЯ" name="name2[]" value="КРИВОШЕЯ">
+<label for="ТАРАНЕНКО"> 16: ТАРАНЕНКО</label>
+
+<input type="checkbox" id="ТАРАНЕНКО" name="name2[]" value="ТАРАНЕНКО">
+<label for="ЧЕРЕДНИЧЕНКО"> 17: ЧЕРЕДНИЧЕНКО</label>
+
+<input type="checkbox" id="ЧЕРЕДНИЧЕНКО" name="name2[]" value="ЧЕРЕДНИЧЕНКО">
+<label for="ІЩУК"> 18: ІЩУК</label>
+
+<input type="checkbox" id="ІЩУК" name="name2[]" value="ІЩУК">
+<label for="ЄМЕЦЬ"> 19: ЄМЕЦЬ</label>
+
+<input type="checkbox" id="ЄМЕЦЬ" name="name2[]" value="ЄМЕЦЬ">
+<label for="МАРКОВИЧ"> 20: МАРКОВИЧ</label>
+
+<input type="checkbox" id="МАРКОВИЧ" name="name2[]" value="МАРКОВИЧ">
+<label for="ЗАГОРУЙКО"> 21: ЗАГОРУЙКО</label>
+
+<input type="checkbox" id="ЗАГОРУЙКО" name="name2[]" value="ЗАГОРУЙКО">
+<label for="КОШЕЛЬ"> 22: КОШЕЛЬ</label>
+
+<input type="checkbox" id="КОШЕЛЬ" name="name2[]" value="КОШЕЛЬ">
+<label for="ГАВРИЛЯК"> 23: ГАВРИЛЯК</label>
+
+<input type="checkbox" id="ГАВРИЛЯК" name="name2[]" value="ГАВРИЛЯК">
+<label for="МАЛЬОВАНИЙ"> 24: МАЛЬОВАНИЙ</label>
+
+<input type="checkbox" id="МАЛЬОВАНИЙ" name="name2[]" value="МАЛЬОВАНИЙ">
+<label for="КОЛОДІЙ"> 25: КОЛОДІЙ</label>
+
+<input type="checkbox" id="КОЛОДІЙ" name="name2[]" value="КОЛОДІЙ">
+<label for="КОВАЛЬЧУК"> 26: КОВАЛЬЧУК</label>
+
+<input type="checkbox" id="КОВАЛЬЧУК" name="name2[]" value="КОВАЛЬЧУК">
+<label for="ГЕРГЕЛЬ"> 27: ГЕРГЕЛЬ</label>
+
+<input type="checkbox" id="ГЕРГЕЛЬ" name="name2[]" value="ГЕРГЕЛЬ">
+<label for="ЗАБОЛОТНІЙ"> 28: ЗАБОЛОТНІЙ</label>
+
+<input type="checkbox" id="ЗАБОЛОТНІЙ" name="name2[]" value="ЗАБОЛОТНІЙ">
+<label for="ШИМАНСЬКА"> 29: ШИМАНСЬКА</label>
+
+<input type="checkbox" id="ШИМАНСЬКА" name="name2[]" value="ШИМАНСЬКА">
+<label for="МАРТИНЕНКО"> 30: МАРТИНЕНКО</label>
+
+<input type="checkbox" id="МАРТИНЕНКО" name="name2[]" value="МАРТИНЕНКО">
+<label for="ЗАЄЦЬ"> 31: ЗАЄЦЬ</label>
+
+<input type="checkbox" id="ЗАЄЦЬ" name="name2[]" value="ЗАЄЦЬ">
+<label for="ТРОХИМЧУК"> 32: ТРОХИМЧУК</label>
+
+<input type="checkbox" id="ТРОХИМЧУК" name="name2[]" value="ТРОХИМЧУК">
+<label for="ВОЛКОВ"> 33: ВОЛКОВ</label>
+
+<input type="checkbox" id="ВОЛКОВ" name="name2[]" value="ВОЛКОВ">
+<label for="ВОЗНЯК"> 34: ВОЗНЯК</label>
+
+<input type="checkbox" id="ВОЗНЯК" name="name2[]" value="ВОЗНЯК">
+<label for="ВАСИЛИК"> 35: ВАСИЛИК</label>
+
+<input type="checkbox" id="ВАСИЛИК" name="name2[]" value="ВАСИЛИК">
+<label for="ОМЕЛЬЧУК"> 36: ОМЕЛЬЧУК</label>
+
+<input type="checkbox" id="ОМЕЛЬЧУК" name="name2[]" value="ОМЕЛЬЧУК">
+<label for="ДАНИЛЮК"> 37: ДАНИЛЮК</label>
+
+<input type="checkbox" id="ДАНИЛЮК" name="name2[]" value="ДАНИЛЮК">
+<label for="ЛИСА"> 38: ЛИСА</label>
+
+<input type="checkbox" id="ЛИСА" name="name2[]" value="ЛИСА">
+<label for="НОВІКОВ"> 39: НОВІКОВ</label>
+
+<input type="checkbox" id="НОВІКОВ" name="name2[]" value="НОВІКОВ">
+<label for="БІЛИК"> 40: БІЛИК</label>
+
+<input type="checkbox" id="БІЛИК" name="name2[]" value="БІЛИК">
+<label for="КОТЕНКО"> 41: КОТЕНКО</label>
+
+<input type="checkbox" id="КОТЕНКО" name="name2[]" value="КОТЕНКО">
+<label for="МЕДВЕДЄВ"> 42: МЕДВЕДЄВ</label>
+
+<input type="checkbox" id="МЕДВЕДЄВ" name="name2[]" value="МЕДВЕДЄВ">
+<label for="ПЕТРУК"> 43: ПЕТРУК</label>
+
+<input type="checkbox" id="ПЕТРУК" name="name2[]" value="ПЕТРУК">
+<label for="ДОВГАЛЬ"> 44: ДОВГАЛЬ</label>
+
+<input type="checkbox" id="ДОВГАЛЬ" name="name2[]" value="ДОВГАЛЬ">
+<label for="ЦИМБАЛ"> 45: ЦИМБАЛ</label>
+
+<input type="checkbox" id="ЦИМБАЛ" name="name2[]" value="ЦИМБАЛ">
+<label for="ЛЕСЬКІВ"> 46: ЛЕСЬКІВ</label>
+
+<input type="checkbox" id="ЛЕСЬКІВ" name="name2[]" value="ЛЕСЬКІВ">
+<label for="ЧЕРНЮК"> 47: ЧЕРНЮК</label>
+
+<input type="checkbox" id="ЧЕРНЮК" name="name2[]" value="ЧЕРНЮК">
+<label for="КОЦЮБА"> 48: КОЦЮБА</label>
+
+<input type="checkbox" id="КОЦЮБА" name="name2[]" value="КОЦЮБА">
+<label for="КАСЬЯНЕНКО"> 49: КАСЬЯНЕНКО</label>
+
+<input type="checkbox" id="КАСЬЯНЕНКО" name="name2[]" value="КАСЬЯНЕНКО">
+<label for="БОБРИК"> 50: БОБРИК</label>
+
+<input type="checkbox" id="БОБРИК" name="name2[]" value="БОБРИК">
+<label for="МУНТЯН"> 51: МУНТЯН</label>
+
+<input type="checkbox" id="МУНТЯН" name="name2[]" value="МУНТЯН">
+<label for="СОБЧУК"> 52: СОБЧУК</label>
+
+<input type="checkbox" id="СОБЧУК" name="name2[]" value="СОБЧУК">
+<label for="ОСТРОВСЬКИЙ"> 53: ОСТРОВСЬКИЙ</label>
+
+<input type="checkbox" id="ОСТРОВСЬКИЙ" name="name2[]" value="ОСТРОВСЬКИЙ">
+<label for="КИРИЧЕНКО"> 54: КИРИЧЕНКО</label>
+
+<input type="checkbox" id="КИРИЧЕНКО" name="name2[]" value="КИРИЧЕНКО">
+<label for="ПОПЛАВСЬКА"> 55: ПОПЛАВСЬКА</label>
+
+<input type="checkbox" id="ПОПЛАВСЬКА" name="name2[]" value="ПОПЛАВСЬКА">
+<label for="ПОПЕНКО"> 56: ПОПЕНКО</label>
+
+<input type="checkbox" id="ПОПЕНКО" name="name2[]" value="ПОПЕНКО">
+<label for="БЕЗУГЛИЙ"> 57: БЕЗУГЛИЙ</label>
+
+<input type="checkbox" id="БЕЗУГЛИЙ" name="name2[]" value="БЕЗУГЛИЙ">
+<label for="ГЛОБА"> 58: ГЛОБА</label>
+
+<input type="checkbox" id="ГЛОБА" name="name2[]" value="ГЛОБА">
+<label for="ЛУКЯНОВ"> 59: ЛУКЯНОВ</label>
+
+<input type="checkbox" id="ЛУКЯНОВ" name="name2[]" value="ЛУКЯНОВ">
+<label for="КОНИК"> 60: КОНИК</label>
+
+<input type="checkbox" id="КОНИК" name="name2[]" value="КОНИК">
+<label for="ФЕДОРЧУК"> 61: ФЕДОРЧУК</label>
+
+<input type="checkbox" id="ФЕДОРЧУК" name="name2[]" value="ФЕДОРЧУК">
+<label for="ШВИДКИЙ"> 62: ШВИДКИЙ</label>
+
+<input type="checkbox" id="ШВИДКИЙ" name="name2[]" value="ШВИДКИЙ">
+<label for="МАХНО"> 63: МАХНО</label>
+
+<input type="checkbox" id="МАХНО" name="name2[]" value="МАХНО">
+<label for="ЛУКЯНОВА"> 64: ЛУКЯНОВА</label>
+
+<input type="checkbox" id="ЛУКЯНОВА" name="name2[]" value="ЛУКЯНОВА">
+<label for="НЕДІЛЬКО"> 65: НЕДІЛЬКО</label>
+
+<input type="checkbox" id="НЕДІЛЬКО" name="name2[]" value="НЕДІЛЬКО">
+<label for="ШВЕЦЬ"> 66: ШВЕЦЬ</label>
+
+<input type="checkbox" id="ШВЕЦЬ" name="name2[]" value="ШВЕЦЬ">
+<label for="МАЦЮК"> 67: МАЦЮК</label>
+
+<input type="checkbox" id="МАЦЮК" name="name2[]" value="МАЦЮК">
+<label for="ІВАСЮК"> 68: ІВАСЮК</label>
+
+<input type="checkbox" id="ІВАСЮК" name="name2[]" value="ІВАСЮК">
+<label for="НІКІТЮК"> 69: НІКІТЮК</label>
+
+<input type="checkbox" id="НІКІТЮК" name="name2[]" value="НІКІТЮК">
+<label for="САНДУЛ"> 70: САНДУЛ</label>
+
+<input type="checkbox" id="САНДУЛ" name="name2[]" value="САНДУЛ">
+<label for="СІДЕНКО"> 71: СІДЕНКО</label>
+
+<input type="checkbox" id="СІДЕНКО" name="name2[]" value="СІДЕНКО">
+<label for="СЛЮСАРЕНКО"> 72: СЛЮСАРЕНКО</label>
+
+<input type="checkbox" id="СЛЮСАРЕНКО" name="name2[]" value="СЛЮСАРЕНКО">
+<label for="КАШУБА"> 73: КАШУБА</label>
+
+<input type="checkbox" id="КАШУБА" name="name2[]" value="КАШУБА">
+<label for="ЗАКРЕВСЬКА"> 74: ЗАКРЕВСЬКА</label>
+
+<input type="checkbox" id="ЗАКРЕВСЬКА" name="name2[]" value="ЗАКРЕВСЬКА">
+<label for="ВДОВЕНКО"> 75: ВДОВЕНКО</label>
+
+<input type="checkbox" id="ВДОВЕНКО" name="name2[]" value="ВДОВЕНКО">
+<label for="ЛЯШКО"> 76: ЛЯШКО</label>
+
+<input type="checkbox" id="ЛЯШКО" name="name2[]" value="ЛЯШКО">
+<label for="СТОРОЖУК"> 77: СТОРОЖУК</label>
+
+<input type="checkbox" id="СТОРОЖУК" name="name2[]" value="СТОРОЖУК">
+<label for="ЩЕРБИНА"> 78: ЩЕРБИНА</label>
+
+<input type="checkbox" id="ЩЕРБИНА" name="name2[]" value="ЩЕРБИНА">
+<label for="ГОНЧАРОВ"> 79: ГОНЧАРОВ</label>
+
+<input type="checkbox" id="ГОНЧАРОВ" name="name2[]" value="ГОНЧАРОВ">
+<label for="НОВОСАД"> 80: НОВОСАД</label>
+
+<input type="checkbox" id="НОВОСАД" name="name2[]" value="НОВОСАД">
+<label for="ТКАЧУК"> 81: ТКАЧУК</label>
+
+<input type="checkbox" id="ТКАЧУК" name="name2[]" value="ТКАЧУК">
+<label for="ЧЕРНЕГА"> 82: ЧЕРНЕГА</label>
+
+<input type="checkbox" id="ЧЕРНЕГА" name="name2[]" value="ЧЕРНЕГА">
+<label for="ДУДКА"> 83: ДУДКА</label>
+
+<input type="checkbox" id="ДУДКА" name="name2[]" value="ДУДКА">
+<label for="КОЗИР"> 84: КОЗИР</label>
+
+<input type="checkbox" id="КОЗИР" name="name2[]" value="КОЗИР">
+<label for="ЧЕРЕВКО"> 85: ЧЕРЕВКО</label>
+
+<input type="checkbox" id="ЧЕРЕВКО" name="name2[]" value="ЧЕРЕВКО">
+<label for="КОВАЛЮК"> 86: КОВАЛЮК</label>
+
+<input type="checkbox" id="КОВАЛЮК" name="name2[]" value="КОВАЛЮК">
+<label for="КУЛИК"> 87: КУЛИК</label>
+
+<input type="checkbox" id="КУЛИК" name="name2[]" value="КУЛИК">
+<label for="КОЛОМІЄЦЬ"> 88: КОЛОМІЄЦЬ</label>
+
+<input type="checkbox" id="КОЛОМІЄЦЬ" name="name2[]" value="КОЛОМІЄЦЬ">
+<label for="ГРИЩУК"> 89: ГРИЩУК</label>
+
+<input type="checkbox" id="ГРИЩУК" name="name2[]" value="ГРИЩУК">
+<label for="БАРАНЕНКО"> 90: БАРАНЕНКО</label>
+
+<input type="checkbox" id="БАРАНЕНКО" name="name2[]" value="БАРАНЕНКО">
+<label for="ДЯЧОК"> 91: ДЯЧОК</label>
+
+<input type="checkbox" id="ДЯЧОК" name="name2[]" value="ДЯЧОК">
+<label for="БЕРЕГОВА"> 92: БЕРЕГОВА</label>
+
+<input type="checkbox" id="БЕРЕГОВА" name="name2[]" value="БЕРЕГОВА">
+<label for="ШОСТАК"> 93: ШОСТАК</label>
+
+<input type="checkbox" id="ШОСТАК" name="name2[]" value="ШОСТАК">
+<label for="СЕРЕДА"> 94: СЕРЕДА</label>
+
+<input type="checkbox" id="СЕРЕДА" name="name2[]" value="СЕРЕДА">
+<label for="ГАЙДУК"> 95: ГАЙДУК</label>
+
+<input type="checkbox" id="ГАЙДУК" name="name2[]" value="ГАЙДУК">
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="one-half column" style="margin-top:60px">
+                <label for="myname">Меня зовут</label>
+              <input type="text" id="myname" name="myname"></input>
+
+      <label for="ok_share"> Я <b>НЕ</b> согласен, чтоб в конце имя, написанное выше, было опубликовано в рейтинге результатов.</label>
+                <input type="checkbox" id="ok_share" name="ok_share" value="ok_share">
+                <br>
+                <input class="button-primary" value="Submit" type="submit">
+
+      </div>
+      </form>
+    </div>
+
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
