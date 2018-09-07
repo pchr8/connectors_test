@@ -44,8 +44,7 @@
       </div>
     </div>
     <div class="row">
-            <form action="{{url_for('userres')}}" method="post">
-
+            <form action="{{url_for('userres')}}" method="post" autocomplete="off">
               <div class="one-half column">
                         {% for n in names1 %}
                         <label for="{{n}}"> <input type="checkbox" id="{{n}}" name="nlist1[]" value="{{n}}">
@@ -76,8 +75,9 @@
                         <option value="ae">Attack helicopter</option>
                 </select>
 
-                <label for="age">Мне</label>
-              <input type="text" id="age" name="age"></input>
+                <label for="age">Мне
+              <input type="text" id="age" name="age"></input> полных лет.
+                </label>
 
       <label for="noshare"> Я <b>НЕ</b> хочу выводится в рейтинге.
                 <input type="checkbox" id="noshare" name="noshare" value="noshare">

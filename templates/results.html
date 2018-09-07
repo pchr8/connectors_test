@@ -38,7 +38,11 @@
                          <ul class=entries>
                           {% for entry in entries %}
                                 {% if not entry.noshare %}
-                                  <li>{{ entry.name }}({{entry.gender}}, {{entry.age}}):{{entry.n1}}/{{entry.n2}}</li>
+                                        {% if entry.age!="N/A" and entry.age!="None" %}
+                                          <li>{{ entry.name }}({{entry.gender}}, {{entry.age}}):{{entry.n1}}/{{entry.n2}}</li>
+                                        {% else %}
+                                          <li>{{ entry.name }}({{entry.gender}}):{{entry.n1}}/{{entry.n2}}</li>
+                                        {% endif %}
                                 {% endif %}
                           {% else %}
                           Unbelievable. No entries here so far.
