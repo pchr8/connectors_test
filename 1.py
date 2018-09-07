@@ -8,7 +8,7 @@ from flask import session
 from flask import g
 from sqlite3 import dbapi2 as sqlite3
 from datetime import datetime
-import functions as f
+from . import functions as f
 
 app = Flask(__name__)
 app.secret_key = 'super secret key'
@@ -19,8 +19,8 @@ if __name__ == "__main__":
     app.debug = True
     app.run()
 
-# SERVICE FUNCTIONS
-# Database
+
+# DATABASE
 # {{
 def init_db():
     """Initializes the database."""
@@ -51,28 +51,31 @@ def get_db():
     return g.sqlite_db
 # }}
 
-# BASIC FUNCTIONS
 
 def workon(request):
     """ Get user input, save it, and send to thank you page """
     error=None;
 
+    # Get POST data
     name = request.form.get('myname')
     fage = request.form.get('age')
     gender = request.form.get('gender')
     fnoshare = request.form.get('noshare')
     
+    # Check it
     if not name:
         error='Username is required'; 
+
     if not gender:
         # TODO: Sanitize it based on expected values
         gender='na'
+
     if not fage:
         age="N/A";
     else:
         try:
             # TODO: something smarter
-            # Do I have to be so aggressive?
+            # Also: do I have to be so aggressive?
             t=int(fage)
             if (t<120):
                 age=str(t)
@@ -93,16 +96,12 @@ def workon(request):
     l2 = request.form.getlist("nlist2[]");
     l2len=len(l2);
 
-    #except KeyError:
-    #    app.logger.warning('keyerror');
-    #    l2len=0;
-    #    l2=[];
-
     # Save the results
     db = get_db()
     db.execute('insert into entries (name, age, gender, nlist1, n1, nlist2, n2, ip, date, noshare) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
                [name, age, gender, str(l1), l1len, str(l2), l2len,  "127.9.9.91", datetime.now(), noshare])
     db.commit()
+
     if error is None:
         return render_template('res.html', name=name, nn1=l1len, nn2=l2len);
     flash(error);
@@ -110,6 +109,10 @@ def workon(request):
 
 # ROUTES
 
+@app.route('/')
+def generate():
+    n1, n2 = f.generate_names(50);
+    return render_template('index.html', names1=n1, names2=n2);
 
 @app.route('/res', methods=['GET', 'POST'])
 def userres():
@@ -128,12 +131,8 @@ def finalres():
     app.logger.warning(entries)
     return render_template('results.html', entries=entries);
 
-@app.route('/')
-def generate():
-    n1, n2 = f.generate_names(50);
-    return render_template('index.html', names1=n1, names2=n2);
-
 # TODO
 # security
 # rate limiting
 # Nice words formatting
+# __init__, init db, and in general -- architecture

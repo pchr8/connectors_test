@@ -2,94 +2,93 @@
 <html lang="en">
 <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>The POST form to end all POST forms</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>The POST form to end all POST forms</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
+	<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Опросник который закончит все опросники</h4>
-        <p>Этот файл содержит два списка из фамилий. Поставьте галочку (можнo нажимая на имя) напротив тех, человека с которой вы знаете лично, независимо от пола. ("Поплавський" и "Поплавська" это одно и то же.).
-        </p>
-        <p>
-        В конце, вы узнаете много интересного о себе. 
-        Все вопросы к @pchr8.
-        Спасибо!</p>
-        <hr>
-      </div>
-    </div>
-    <div class="row">
-            <form action="{{url_for('userres')}}" method="post" autocomplete="off">
-              <div class="one-half column">
-                        {% for n in names1 %}
-                        <label for="{{n}}"> <input type="checkbox" id="{{n}}" name="nlist1[]" value="{{n}}">
-                                &nbsp; &nbsp; &nbsp; &nbsp; 
-                                {{n}} 
-                        </label>
-                        {% endfor %}
-              </div>
-              <div class="one-half column">
-                        {% for n in names2 %}
-                        <label for="{{n}}"> <input type="checkbox" id="{{n}}" name="nlist2[]" value="{{n}}">
-                                &nbsp; &nbsp; &nbsp; &nbsp; 
-                                {{n}} 
-                        </label>
-                        {% endfor %}
-              </div>
+	<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="container">
+		<div class="row">
+			<div class="one-half column" style="margin-top: 25%">
+				<h4>Опросник который закончит все опросники</h4>
+				<p>Этот файл содержит два списка из фамилий. Поставьте галочку (можнo нажимая на имя) напротив тех, человека с которой вы знаете лично, независимо от пола. ("Поплавський" и "Поплавська" это одно и то же.).
+				</p>
+				<p>
+				В конце, вы узнаете много интересного о себе. 
+				Все вопросы к @pchr8.
+				Спасибо!</p>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<form action="{{url_for('userres')}}" method="post" autocomplete="off">
+			<div class="one-half column">
+				{% for n in names1 %}
+				<label for="{{n}}"> <input type="checkbox" id="{{n}}" name="nlist1[]" value="{{n}}">
+					&nbsp; &nbsp; &nbsp; &nbsp; 
+					{{n}} 
+				</label>
+				{% endfor %}
+			</div>
+			<div class="one-half column">
+				{% for n in names2 %}
+				<label for="{{n}}"> <input type="checkbox" id="{{n}}" name="nlist2[]" value="{{n}}"> &nbsp; &nbsp; &nbsp; &nbsp; 
+					{{n}} 
+				</label>
+				{% endfor %}
+			</div>
 
-    </div>
+		</div>
 
-    <div class="row">
-      <div class="one-half column" style="margin-top:60px">
-                <label for="myname">Меня зовут </label>
-              <input type="text" id="myname" name="myname"></input>
-                
-                <select name=gender>
-                        <option value="m">М</option>
-                        <option value="f">Ж</option>
-                        <option value="ae">Attack helicopter</option>
-                </select>
+		<div class="row">
+			<div class="one-half column" style="margin-top:60px">
+				<label for="myname">Меня зовут </label>
+				<input type="text" id="myname" name="myname"></input>
 
-                <label for="age">Мне
-              <input type="text" id="age" name="age"></input> полных лет.
-                </label>
+				<select name=gender>
+				<option value="m">М</option>
+				<option value="f">Ж</option>
+				<option value="ae">Attack helicopter</option>
+				</select>
 
-      <label for="noshare"> Я <b>НЕ</b> хочу выводится в рейтинге.
-                <input type="checkbox" id="noshare" name="noshare" value="noshare">
-                <br>
-                <input class="button-primary" value="Submit" type="submit">
-      </div>
-      </form>
-    </div>
+				<label for="age">Мне
+				<input type="text" id="age" name="age"></input> полных лет.
+				</label>
 
-  </div>
+				<label for="noshare"> Я <b>НЕ</b> хочу выводится в рейтинге.
+				<input type="checkbox" id="noshare" name="noshare" value="noshare">
+				<br>
+				<input class="button-primary" value="Submit" type="submit">
+			</div>
+			</form>
+		</div>
+
+	</div>
 
 <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
