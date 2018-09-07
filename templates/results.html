@@ -35,11 +35,17 @@
       <div class="one-half column" style="margin-top: 25%">
               <h4>Спасибо!</h4>
                <p>
-                       Final results
-               В конце, вы узнаете много интересного о себе. 
-               Все вопросы к @pchr8.
-               Спасибо!</p>
-        <hr>
+                         <ul class=entries>
+                          {% for entry in entries %}
+                                {% if not entry.noshare %}
+                                  <li>{{ entry.name }}({{entry.gender}}, {{entry.age}}):{{entry.n1}}/{{entry.n2}}</li>
+                                {% endif %}
+                          {% else %}
+                          Unbelievable. No entries here so far.
+                          {% endfor %}
+                          </ul>
+               </p>
+               <!-- <hr> -->
       </div>
     </div>
 

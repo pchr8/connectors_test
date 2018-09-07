@@ -35,10 +35,11 @@
       <div class="one-half column" style="margin-top: 25%">
               <h4>Спасибо, {{name}}!</h4>
                <p>
-                       Вы знаете {{l1l}} имен из первого списка и {{l2l}} из второго.
-               Все вопросы к @pchr8.
+                       Вы знаете {{nn1}} имен из первого списка, {{nn2}} из второго. Можете  <a href={{url_for('finalres')}}>перейти на страницу статистики</a>. </p>
+               <p>
+                       Все вопросы к <a href="http://t.me/@pchr8">@pchr8</a>.
                Спасибо!</p>
-                       
+       
                 {% with messages = get_flashed_messages() %}
                   {% if messages %}
                     <ul class=flashes>
