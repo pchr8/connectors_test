@@ -13,8 +13,8 @@ def generate_names(num):
     for i in weights:
         pweights.append(i/sum)
     
-    n1=np.random.choice(n, size=num, p=pweights)
-    n2=np.random.choice(n, size=num)
+    n1=np.random.choice(n, size=num, p=pweights, replace=False)
+    n2=np.random.choice(n, size=num, p=pweights, replace=False)
     return n1, n2
 
 
